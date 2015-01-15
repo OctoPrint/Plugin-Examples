@@ -1,6 +1,12 @@
 import octoprint.plugin
 
-class HelloWorldPlugin(octoprint.plugin.TemplatePlugin, octoprint.plugin.AssetPlugin):
+class HelloWorldPlugin(octoprint.plugin.TemplatePlugin,
+                       octoprint.plugin.AssetPlugin,
+                       octoprint.plugin.StartupPlugin):
+
+	def on_after_startup(self):
+		self._logger.info("Hello World!")
+
 	def get_template_vars(self):
 		return dict(
 			_settings=dict(name="Hello World", custom_bindings=True),
