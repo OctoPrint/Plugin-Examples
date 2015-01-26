@@ -17,7 +17,8 @@ def package_data_dirs(source, sub_folders):
 
 def params():
 	name = "OctoPrint-HelloWorld"
-	version = "0.1"
+	version = "1.0"
+	description = "A quick \"Hello World\" example plugin for OctoPrint"
 
 	packages = [plugin_package]
 	package_data = {plugin_package: package_data_dirs(plugin_package, ['static', 'templates'])}

@@ -49,5 +49,4 @@ class HelloWorldPlugin(octoprint.plugin.TemplatePlugin,
 		)
 
 __plugin_name__ = "Hello World"
-__plugin_version__ = "1.0"
 __plugin_implementations__ = [HelloWorldPlugin()]
