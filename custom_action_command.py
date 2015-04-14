@@ -12,7 +12,7 @@ class CustomActionCommandPlugin(octoprint.plugin.OctoPrintPlugin):
 
 __plugin_name__ = "Custom action command"
 
-def __plugin_init__():
+def __plugin_load__():
 	plugin = CustomActionCommandPlugin()
 
 	global __plugin_implementation__
