@@ -21,6 +21,9 @@ Currently the following examplatory plugins can be found here:
   * **rewrite_m107**: Single file plugin (place it in ``~/.octoprint/plugins``) that shows how to utilize the
     [octoprint.comm.protocol.gcode hook](http://docs.octoprint.org/en/devel/plugins/hooks.html#octoprint-comm-protocol-gcode)
     by swapping the (deprecated) ``M107`` command with the equivalent ``M106 S0``.
+  * **strip_all_comments**: Single file plugin (place it in ``~/.octoprint/plugins``) that shows how to utilize the
+    [octoprint.filemanager.preprocessor hook](http://docs.octoprint.org/en/devel/plugins/hooks.html#octoprint-filemanager-preprocessor)
+    by removing the comments (and empty lines) from all uploaded/generated GCODE files ending on the name postfix "_strip".
 
 Further Links
 -------------
