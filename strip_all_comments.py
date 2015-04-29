@@ -13,7 +13,7 @@ class CommentStripper(octoprint.filemanager.util.LineProcessorStream):
 			return None
 		return line + "\r\n"
 
-def strip_all_comments(path, file_object, links=None, printer_profile=None, allow_overwrite=True):
+def strip_all_comments(path, file_object, links=None, printer_profile=None, allow_overwrite=True, *args, **kwargs):
 	if not octoprint.filemanager.valid_file_type(path, type="gcode"):
 		return file_object
 

@@ -1,6 +1,6 @@
 # coding=utf-8
 
-def rewrite_m107(comm, cmd, cmd_type=None, send_checksum=None):
+def rewrite_m107(comm, cmd, cmd_type=None, *args, **kwargs):
 	gcode = comm.gcode_command_for_cmd(cmd)
 	if not gcode or not gcode == "M107":
 		return cmd

@@ -1,6 +1,6 @@
 # coding=utf-8
 
-def message_on_connect(comm, script_type, script_name):
+def message_on_connect(comm, script_type, script_name, *args, **kwargs):
 	if not script_type == "gcode" or not script_name == "afterPrinterConnected":
 		return None
 

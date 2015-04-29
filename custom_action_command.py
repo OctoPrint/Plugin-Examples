@@ -4,7 +4,7 @@ import octoprint.plugin
 
 class CustomActionCommandPlugin(octoprint.plugin.OctoPrintPlugin):
 
-	def custom_action_handler(self, comm, line, action):
+	def custom_action_handler(self, comm, line, action, *args, **kwargs):
 		if not action == "custom":
 			return
 
