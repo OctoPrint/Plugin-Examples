@@ -14,6 +14,9 @@ Currently the following examplatory plugins can be found here:
     "Hello World". Shows the basic structure of a plugin, how plugins can execute code at startup, inject themselves into
     the interface and how they can control when their content is shown based on internal state of the UI such as login
     information.
+  * **increase_bodysize**: Single file plugin (place it in ``~/.octoprint/plugins``) that shows how to increase the 
+    maximum allowed request body size for specific endpoints by utilizing the 
+    [octoprint.server.http.bodysize hook](http://docs.octoprint.org/en/devel/plugins/hooks.html#octoprint-server-http-bodysize).
   * **message_on_connect**: Single file plugin (place it in ``~/.octoprint/plugins``) that shows how to utilize the
     [octoprint.comm.protocol.scripts hook](http://docs.octoprint.org/en/devel/plugins/hooks.html#octoprint-comm-protocol-scripts)
     by adding an ``M117 OctoPrint connected`` to the GCODE script sent to the printer after OctoPrint connected to
