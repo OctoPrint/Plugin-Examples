@@ -5,9 +5,12 @@ This repository collects the sources of examples for writing plugins for [OctoPr
 
 Currently the following examplatory plugins can be found here:
 
+  * **add_tornado_route**: Single file plugin (place it in ``~/.octoprint/plugins``) that shows how to utilize the
+    [octoprint.server.http.routes](http://localhost/octoprint/docs/plugins/hooks.html#octoprint-server-http-routes) hook
+    to add additional routes with custom ``RequestHandlers`` to the server configuration.
   * **custom_action_command**: Single file plugin (place it in ``~/.octoprint/plugins``) that shows how to utilize the
     [octoprint.comm.protocol.action hook](http://docs.octoprint.org/en/devel/plugins/hooks.html#octoprint-comm-protocol-action)
-    and how to register hook handlers that are part of a mixin implementation. The plugin will listen for 
+    hook and how to register hook handlers that are part of a mixin implementation. The plugin will listen for 
     firmware messages of the form ``// action:custom`` and if received will log that it received the "custom" action
     from the firmware.
   * **helloworld**: A simple plugin that injects itself into various places in OctoPrint's web interface to display
