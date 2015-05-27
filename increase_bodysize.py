@@ -29,7 +29,7 @@ class BodySizePlugin(octoprint.plugin.BlueprintPlugin,
 		return flask.jsonify(result)
 
 	def bodysize_hook(self, current_max_body_sizes, *args, **kwargs):
-		return [("POST", r"/plugin/increase_bodysize/upload/%i" % size, size * 1024) for size in self._sizes]
+		return [("POST", r"/upload/%i" % size, size * 1024) for size in self._sizes]
 
 __plugin_name__ = "Increase upload size"
 __plugin_description__ = "Increases the body size on some custom API endpoints"
