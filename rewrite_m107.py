@@ -1,11 +1,24 @@
 # coding=utf-8
 
-def rewrite_m107(comm, cmd, cmd_type=None, *args, **kwargs):
-	gcode = comm.gcode_command_for_cmd(cmd)
-	if not gcode or not gcode == "M107":
-		return cmd
+import octoprint.plugin
 
-	return "M106 S0"
+class RewriteM107Plugin(octoprint.plugin.OctoPrintPlugin):
+	def rewrite_m107(self, comm_instance, phase, cmd, cmd_type, gcode, *args, **kwargs):
+		if gcode and gcode == "M107":
+			cmd = "M106 S0"
+		return cmd,
+
+	def sent_m106(self, comm_instance, phase, cmd, cmd_type, gcode, *args, **kwargs):
+		if gcode and gcode == "M106":
+			self._logger.info("Just sent M106: {cmd}".format(**locals()))
 
 __plugin_name__ = "Rewrite M107"
-__plugin_hooks__ = {"octoprint.comm.protocol.gcode": rewrite_m107}
+def __plugin_load__():
+	global __plugin_implementation__
+	__plugin_implementation__ = RewriteM107Plugin()
+
+	global __plugin_hooks__
+	__plugin_hooks__ = {
+		"octoprint.comm.protocol.gcode.queuing": __plugin_implementation__.rewrite_m107,
+		"octoprint.comm.protocol.gcode.sent": __plugin_implementation__.sent_m106
+	}
