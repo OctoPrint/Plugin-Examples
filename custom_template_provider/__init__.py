@@ -4,7 +4,7 @@ import octoprint.plugin
 
 class CustomTemplateTypeProvider(octoprint.plugin.TemplatePlugin):
 
-	def add_templatetype(self, current_rules, current_order, *args, **kwargs):
+	def add_templatetype(self, current_order, current_rules, *args, **kwargs):
 		return [
 			("awesometemplate", dict(), dict(template=lambda x: x + "_awesometemplate.jinja2"))
 		]
