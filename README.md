@@ -13,6 +13,12 @@ Currently the following examplatory plugins can be found here:
     hook and how to register hook handlers that are part of a mixin implementation. The plugin will listen for 
     firmware messages of the form ``// action:custom`` and if received will log that it received the "custom" action
     from the firmware.
+  * **custom_template_consumer**: Single directory plugin (place it in ``~/.octoprint/plugins``) that shows how to
+    have a plugin inject itself into custom places provided through other plugins in the web interface through utilizing
+    a custom template type if the presence of the provider of that template is detected.
+  * **custom_template_provider**: Single directory plugin (place it in ``~/.octoprint/plugins``) that shows how to
+    provide a custom template type through the [octoprint.ui.web.templatetypes hook](http://docs.octoprint.org/en/devel/plugins/hooks.html#octoprint-ui-web-templatetypes)
+    and how to display templates of that type.
   * **helloworld**: A simple plugin that injects itself into various places in OctoPrint's web interface to display
     "Hello World". Shows the basic structure of a plugin, how plugins can execute code at startup, inject themselves into
     the interface and how they can control when their content is shown based on internal state of the UI such as login
