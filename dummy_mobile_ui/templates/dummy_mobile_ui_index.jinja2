@@ -7,16 +7,21 @@
         <h1>Dummy Mobile OctoPrint UI</h1>
 
         <p>
-            Well hello there. Sadly, this is only a placeholder page used to demonstrate
-            how UiPlugins work. Hence the "Dummy" in the name. Hope you are not too
-            disappointed :)
+            Well hello there. Sadly, this is only a placeholder page used to
+            demonstrate how UiPlugins work. Hence the "Dummy" in the name.
+            Hope you are not too disappointed :)
         </p>
 
         <p>
-            Some data from the <code>render_kwargs</code> passed to this template:
+            Some data from the <code>render_kwargs</code> passed to this
+            template:
         </p>
 
         <ul>
+            <!--
+             We can include any render keywords arguments by their name,
+             using the regular Jinja templating functionality.
+             -->
             <li>Version: {{ display_version }}</li>
             <li>Debug: {{ debug }}</li>
             <li>Template Count: {{ templates|length }}</li>
