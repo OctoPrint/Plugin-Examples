@@ -1,3 +1,5 @@
+# Needs OctoPrint 1.3.x or newer
+
 import click
 
 def clitest_commands(*args, **kwargs):
