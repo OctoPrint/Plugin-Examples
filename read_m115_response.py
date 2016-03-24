@@ -15,5 +15,5 @@ def detect_machine_type(comm, line, *args, **kwargs):
 
 __plugin_name__ = "Detect Machine Data"
 __plugin_hooks__ = {
-	"octoprint.comm.protocol.gcode.recieved": detect_machine_type
+	"octoprint.comm.protocol.gcode.received": detect_machine_type
 }
