@@ -41,3 +41,7 @@ Currently the following example plugins and more can be found here:
   * [OctoPrint](https://octoprint.org)
   * [OctoPrint Source Repository](https://github.com/foosel/OctoPrint)
   * [OctoPrint Plugin Documentation](http://docs.octoprint.org/en/master/plugins/index.html)
+  
+## License
+
+These examples are licensed under the MIT license. See also `LICENSE` in the source folder.
