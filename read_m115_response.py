@@ -16,6 +16,7 @@ def detect_machine_type(comm, line, *args, **kwargs):
 	return line
 
 __plugin_name__ = "Detect Machine Data"
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_hooks__ = {
 	"octoprint.comm.protocol.gcode.received": detect_machine_type
 }

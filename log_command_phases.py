@@ -25,6 +25,7 @@ def handle_gcode_phase(comm_instance, phase, cmd, cmd_type, gcode, subcode=None,
 
 __plugin_name__ = "Log command phases"
 __plugin_description__ = "Logs the various phases a command sent through OctoPrint to the printer goes through to octoprint.log"
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_hooks__ = {
 	"octoprint.comm.protocol.gcode.queuing": handle_gcode_phase,
 	"octoprint.comm.protocol.gcode.queued": handle_gcode_phase,

@@ -15,4 +15,5 @@ class CustomTemplateTypeConsumer(octoprint.plugin.TemplatePlugin):
 			return []
 
 __plugin_name__ = "Custom Template Consumer"
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_implementation__ = CustomTemplateTypeConsumer()

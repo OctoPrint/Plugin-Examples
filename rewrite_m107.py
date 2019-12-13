@@ -13,6 +13,7 @@ class RewriteM107Plugin(octoprint.plugin.OctoPrintPlugin):
 			self._logger.info("Just sent M106: {cmd}".format(**locals()))
 
 __plugin_name__ = "Rewrite M107"
+__plugin_pythoncompat__ = ">=2.7,<4"
 def __plugin_load__():
 	global __plugin_implementation__
 	__plugin_implementation__ = RewriteM107Plugin()

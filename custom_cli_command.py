@@ -33,7 +33,7 @@ def clitest_commands(*args, **kwargs):
 
 	return [greet_command, random_greet_command]
 
-
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_hooks__ = {
 	"octoprint.cli.commands": clitest_commands
 }

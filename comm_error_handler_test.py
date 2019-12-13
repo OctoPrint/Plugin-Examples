@@ -9,6 +9,7 @@ def handle_error(comm, error_message, *args, **kwargs):
 		return True
 
 __plugin_name__ = "Comm Error Handler Test"
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_hooks__ = {
 	"octoprint.comm.protocol.gcode.error": handle_error
 }

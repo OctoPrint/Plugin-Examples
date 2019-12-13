@@ -21,4 +21,5 @@ class DummyMobileUiPlugin(octoprint.plugin.UiPlugin,
 		                                     **render_kwargs))
 
 __plugin_name__ = "Dummy Mobile UI"
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_implementation__ = DummyMobileUiPlugin()

@@ -11,6 +11,7 @@ class CustomActionCommandPlugin(octoprint.plugin.OctoPrintPlugin):
 		self._logger.info("Received \"custom\" action from printer")
 
 __plugin_name__ = "Custom action command"
+__plugin_pythoncompat__ = ">=2.7,<4"
 
 def __plugin_load__():
 	plugin = CustomActionCommandPlugin()

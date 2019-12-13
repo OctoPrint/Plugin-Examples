@@ -9,4 +9,5 @@ def message_on_connect(comm, script_type, script_name, *args, **kwargs):
 	return prefix, postfix
 
 __plugin_name__ = "Message on connect"
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_hooks__ = {"octoprint.comm.protocol.scripts": message_on_connect}

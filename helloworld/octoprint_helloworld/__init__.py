@@ -27,4 +27,5 @@ class HelloWorldPlugin(octoprint.plugin.StartupPlugin,
 		)
 
 __plugin_name__ = "Hello World"
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_implementation__ = HelloWorldPlugin()

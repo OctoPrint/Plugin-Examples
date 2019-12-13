@@ -8,6 +8,7 @@ def is_sane(actual):
 	return 1.0 <= actual <= 300.0
 
 __plugin_name__ = "Sanitize Temperatures"
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_hooks__ = {
 	"octoprint.comm.protocol.temperatures.received": sanitize_temperatures
 }

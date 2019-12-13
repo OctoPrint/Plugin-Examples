@@ -33,6 +33,7 @@ class BodySizePlugin(octoprint.plugin.BlueprintPlugin,
 
 __plugin_name__ = "Increase upload size"
 __plugin_description__ = "Increases the body size on some custom API endpoints"
+__plugin_pythoncompat__ = ">=2.7,<4"
 
 def __plugin_load__():
 	global __plugin_implementation__

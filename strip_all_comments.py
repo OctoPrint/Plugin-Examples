@@ -27,6 +27,7 @@ def strip_all_comments(path, file_object, links=None, printer_profile=None, allo
 __plugin_name__ = "Strip comments from GCODE"
 __plugin_description__ = "Strips all comments and empty lines from uploaded/generated GCODE files ending on the name " \
                          "postfix \"_strip\", e.g. \"some_file_strip.gcode\"."
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_hooks__ = {
 	"octoprint.filemanager.preprocessor": strip_all_comments
 }

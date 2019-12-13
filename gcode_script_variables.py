@@ -10,4 +10,5 @@ def gcode_script_variables(comm, script_type, script_name, *args, **kwargs):
 	return prefix, postfix, variables
 
 __plugin_name__ = "gcode script variables"
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_hooks__ = {"octoprint.comm.protocol.scripts": gcode_script_variables}

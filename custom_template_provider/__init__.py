@@ -10,6 +10,7 @@ class CustomTemplateTypeProvider(octoprint.plugin.TemplatePlugin):
 		]
 
 __plugin_name__ = "Custom Template Provider"
+__plugin_pythoncompat__ = ">=2.7,<4"
 def __plugin_load__():
 	global __plugin_implementation__
 	__plugin_implementation__ = CustomTemplateTypeProvider()
